@@ -1,0 +1,151 @@
+.auth_container{
+  --scale: 0.8;
+
+  --auth-switch: var(--neon-blue);
+  --auth_container--padding: 0 calc(1.5rem * var(--scale)) 0 calc(4rem * var(--scale));
+
+  --auth-switch-font-size: calc(1.25rem * var(--scale));
+  --auth-title-top-font-size: calc(3.5rem * var(--scale));
+  --auth-title-bottom-font-size: calc(2rem * var(--scale));
+  --auth-input-padding: calc(14px * var(--scale)) calc(20px * var(--scale));
+  --auth-input-font-size: calc(1.375rem * var(--scale));
+  --auth-input-gap: calc(2rem * var(--scale));
+  --auth-submit-padding: calc(0.75rem * var(--scale)) calc(3rem * var(--scale));
+}
+
+.auth_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    margin: var(--auth_container--padding);
+    max-width: calc(600px * var(--scale));
+
+    .form_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(30px * var(--scale));
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(20px * var(--scale));
+            align-self: stretch;
+
+            .title {
+                color: var(--white);
+                font-family: 'ARP 240';
+                font-size: var(--auth-title-top-font-size);
+
+                .lower-half {
+                    font-size: var(--auth-title-bottom-font-size);
+                }
+
+                .highlight {
+                    color: var(--auth-title-highlight);
+                }
+            }
+
+            .switch {
+                color: #FFF;
+                font-family: "GoogleSansRegular";
+                font-size: var(--auth-switch-font-size);
+                letter-spacing: 0.4px;
+            }
+        }
+
+        .auth_switch{
+          color: var(--auth-switch);
+        }
+
+        .extra_button{
+          color:var(--yellow);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--auth-input-gap);
+            align-self: stretch;
+
+            .ly {
+                display: flex;
+                align-items: center;
+                gap: var(--auth-input-gap);
+                align-self: stretch;
+
+                .input-wrapper{
+                  position: relative;
+                  display: flex;
+                  align-self: stretch;
+                  flex: 1 0 0;
+                }
+
+                input {
+                    display: flex;
+                    padding: var(--auth-input-padding);
+                    flex: 1 0 0;
+                    align-self: stretch;
+
+                    font-family: 'GoogleSansRegular';
+                    color: var(--white);
+                    font-size: var(--auth-input-font-size);
+                    border-radius: calc(10px * var(--scale));
+
+                    &::placeholder {
+                        font-family: 'GoogleSansRegular';
+                        color: var(--white);
+                        font-size: var(--auth-input-font-size);
+                    }
+                }
+            }
+
+            .extra-content{
+              font-size: 0.75rem;
+              color:var(--white);
+            }
+
+            button {
+                display: flex;
+                padding: var(--auth-submit-padding);
+                justify-content: center;
+                align-items: center;
+                border-radius: calc(10px * var(--scale));
+                border: 1px solid rgba(255, 255, 255, 0.26);
+                background: #FFF;
+                backdrop-filter: blur(11.4px);
+                color: #202020;
+                font-family: "GoogleSansRegular";
+                font-size: var(--auth-input-font-size);
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  .auth_container {
+    --scale: 0.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .auth_container {
+    --scale: 0.75;
+
+    .ly{
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth_container {
+    --scale: 0.7;
+    --auth_container--padding: 0 calc(1.5rem * var(--scale)) 0 calc(2rem * var(--scale));
+  }
+}
+

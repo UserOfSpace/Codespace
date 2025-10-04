@@ -1,0 +1,177 @@
+.navbar{
+    --navbar-scale: 1;
+    --navbar-padding: calc(1.875rem * var(--navbar-scale)) calc(4.375rem * var(--navbar-scale)) calc(1.25rem * var(--navbar-scale)) calc(4.375rem * var(--navbar-scale));
+    --navbar-links-font-size: calc(1.5rem * var(--navbar-scale));
+    --navbar-links-gap: calc(2rem * var(--navbar-scale));
+    --navbar-signup-padding: calc(1rem * var(--navbar-scale)) calc(2.25rem * var(--navbar-scale));
+    --navbar-logo-font-size: calc(1.5rem * var(--navbar-scale));
+    --navbar-link-padding: calc(0.625rem * var(--navbar-scale));
+    --navbar-action-padding: calc(0.625rem * var(--navbar-scale));
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.full_logo {
+    display: none;
+    height: 2.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--navbar-padding);
+    background: linear-gradient(0deg, #b9b9b900, #000c 70%);
+
+    .navbar__left {
+        display: flex;
+        align-items: center;
+        gap: var(--navbar-links-gap);
+    }
+
+    .navbar__logo {
+        font-size: var(--navbar-logo-font-size);
+    }
+
+    .navbar__links {
+        display: flex;
+        align-items: center;
+        gap: var(--navbar-links-gap);
+        list-style: none;
+
+        .navbar__link {
+            display: flex;
+            padding: var(--navbar-link-padding);
+            justify-content: center;
+            align-items: center;
+            color: var(--nav-text-color);
+            font-family: var(--nav-text-font);
+            font-size: var(--navbar-links-font-size);
+            letter-spacing: -0.025rem;
+            text-transform: capitalize;
+            white-space: nowrap;
+
+            &:hover {
+                color: var(--nav-text-hover-color);
+            }
+        }
+    }
+
+    .navbar__right {
+        display: flex;
+        gap: var(--navbar-links-gap);
+    }
+
+    .navbar__hamburger {
+        display: none;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .setting{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0.5rem;
+
+        .name_rating{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:0.25rem;
+            align-self: stretch;
+
+            .name{
+                font-weight: 600;
+            }
+
+            .rating{
+                font-size: 0.875rem;
+                font-weight: 500;
+                color:#ffffffbd
+            }
+        }
+    }
+
+    .navbar__action {
+        display: flex;
+        padding: var(--navbar-action-padding);
+        justify-content: center;
+        align-items: center;
+        border-radius: 3.125rem;
+        color: var(--nav-text-color);
+        font-family: var(--nav-text-font);
+        font-size: var(--navbar-links-font-size);
+        letter-spacing: -0.025rem;
+        text-transform: capitalize;
+        transition: background 0.3s;
+        white-space: nowrap;
+
+        &:hover {
+            color: #dadada;
+        }
+    }
+
+    .navbar__action--signup {
+        padding: var(--navbar-signup-padding);
+    }
+}
+
+@media screen and (max-width: 1530px) and (max-height: 713px) {
+    .navbar {
+        --navbar-scale: 0.9;
+    }
+}
+
+@media screen and (max-width: 1370px) and (max-height: 650px) {
+    .navbar {
+        --navbar-scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .logo {
+        display: none;
+    }
+
+    .full_logo {
+        display: block;
+        height: 2rem;
+    }
+
+    .navbar {
+        .navbar__hamburger {
+            display: flex;
+        }
+
+        .navbar__action--login,.navbar__action--signup,.setting{
+            display: none;
+        }
+
+        .navbar__links {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+
+            .navbar__link {
+                padding: 0.75rem 1rem;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar{
+            --navbar-padding: calc(1.875rem * var(--navbar-scale)) calc(2.375rem * var(--navbar-scale)) calc(1.25rem * var(--navbar-scale)) calc(2.375rem * var(--navbar-scale));
+    }
+}
+

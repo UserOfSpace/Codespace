@@ -1,0 +1,91 @@
+@use "./styles/app.scss" as *;
+@use "./styles/fonts.scss" as *;
+@use "./styles/shortcuts.scss" as *;
+@use "./styles/colors.scss" as *;
+@use "./styles/css_shortcuts.scss" as *;
+
+@use "./styles/common/additional_colors.scss" as *;
+@use "./styles/common/glassmorphism.scss" as *;
+@use "./styles/common/glass-box.scss" as *;
+@use "./styles/common/generic_modal.scss" as *;
+
+@use "./styles/Authentication/auth_container.scss" as *;
+@use "./styles/Authentication/register.scss" as *;
+@use "./styles/Authentication/login.scss" as *;
+@use "./styles/Authentication/confirm_email.scss" as *;
+@use "./styles/Authentication/forgot_password.scss" as *;
+
+@use "./styles/Home/home.scss" as *;
+
+@use "./styles/Layout/navbar.scss" as *;
+@use "./styles/Layout/sidebar.scss" as *;
+@use "./styles/Layout/footer.scss" as *;
+
+@use "./styles/Challenge/challenge-section.scss" as *;
+@use "./styles/Challenge/challenge-room.scss" as *;
+@use "./styles/Challenge/popup.scss" as *;
+
+@use "./styles/User/user_profile.scss" as *;
+@use "./styles/User/profile_card.scss" as *;
+@use "./styles/User/user_favourite.scss" as *;
+@use "./styles/User/user_steaks.scss" as *;
+@use "./styles/User/user_activities.scss" as *;
+@use "./styles/User/user_matches.scss" as *;
+@use "./styles/User/user_blogs.scss" as *;
+@use "./styles/User/user_questions_solved.scss" as *;
+
+@use "./styles/Write/write_blog.scss" as *;
+@use "./styles/Write/all_blogs.scss" as *;
+
+@use "./styles/Solve/question_list.scss" as *;
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --light-grey: #dadada;
+    --neon-blue:#00E5FF;
+    --yellow:#FB0;
+    --font-kanit: "Kanit", "Inter";
+
+    --nav-text-color: var(--white);
+    --nav-text-font: var(--font-kanit);
+    --nav-text-hover-color:var(--light-grey);
+}
+
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-circle {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 50%;
+    background-color: #D4ECFA;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: var(--font-kanit);
+}  
+
+.skeleton-box {
+    background: linear-gradient(90deg, #333 25%, #444 37%, #333 63%);
+    background-size: 400% 100%;
+    animation: shimmer 5s ease infinite;
+    border-radius: 4px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}

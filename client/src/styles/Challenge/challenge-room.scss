@@ -1,0 +1,717 @@
+.challenge-room{
+    --challenge-room-dark-color:#141318;
+    --challenge-room-light-color:#fff;
+
+    /* Challenge Room */
+    --challenge-room-width: 100%;
+    --challenge-room-height: 100vh;
+    --challenge-room-margin-top: 1rem;
+    --challenge-room-top: 6rem;
+    --challenge-room-gap: 0.5rem;
+
+    /* Panel */
+    --panel-overflow-x: hidden;
+
+    --scaleleft: 0.9;
+    --scaleright: 0.9;
+
+    /* Players Details */
+    --players-details-padding-x: calc(1.25rem * var(--scaleleft));
+    --players-details-gap: calc(1rem * var(--scaleleft));
+    --player-gap: calc(0.625rem * var(--scaleleft));
+    --playername-font-size: calc(1.25rem * var(--scaleleft));
+    --playerrating-font-size: calc(0.875rem * var(--scaleleft));
+
+    /* Problem About */
+    --problem-about-padding: calc(1.75rem * var(--scaleleft)) calc(1.5rem * var(--scaleleft));
+    --problem-about-gap: calc(1rem * var(--scaleleft));
+    --problem-about-border-radius: calc(0rem * var(--scaleleft)) calc(1.25rem * var(--scaleleft)) calc(1.25rem * var(--scaleleft)) calc(0rem * var(--scaleleft));
+
+    /* Problem Title & Level */
+    --problem-title-font-size: calc(2.25rem * var(--scaleleft));
+    --problem-level-padding: calc(0.375rem * var(--scaleleft)) calc(0.375rem * var(--scaleleft));
+    --problem-level-font-size: calc(1.25rem * var(--scaleleft));
+    --problem-level-border-radius: calc(0.25rem * var(--scaleleft));
+
+    /* Problem Description */
+    --problem-desc-font-size: calc(1.625rem * var(--scaleleft));
+
+    /* Problem Info */
+    --problem-info-padding: calc(1.5rem * var(--scaleleft)) calc(1.125rem * var(--scaleleft));
+    --problem-info-gap: calc(3.25rem * var(--scaleleft));
+    --problem-info-border-radius: calc(0.375rem * var(--scaleleft));
+
+    /* Problem Description Text */
+    --problem-description-text-font-size: calc(1.25rem * var(--scaleleft));
+
+    /* Input/Output */
+    --problem-in-out-gap: calc(1.5rem * var(--scaleleft));
+    --problem-in-out-text-font-size: calc(1.25rem * var(--scaleleft));
+
+    /* Problem Example */
+    --problem-example-gap: calc(1.5rem * var(--scaleleft));
+    --problem-example-text-font-size: calc(1.25rem * var(--scaleleft));
+    --problem-example-detail-gap: calc(0.375rem * var(--scaleleft));
+
+    --challenge-room-right-gap: calc(0.5rem * var(--scaleright));
+
+    --challenge-controls-padding-x: calc(1.25rem * var(--scaleright));
+    --challenge-controls-gap: calc(1rem * var(--scaleright));
+    --challenge-controls-left-gap: calc(0.625rem * var(--scaleright));
+    --challenge-time-font-size: calc(1.25rem * var(--scaleright));
+
+    --challenge-controls-right-gap: calc(1.25rem * var(--scaleright));
+    --challenge-control-button-padding: calc(0.375rem * var(--scaleright)) calc(0.625rem * var(--scaleright));
+    --challenge-control-button-gap: calc(0.625rem * var(--scaleright));
+    --challenge-control-border-radius: calc(0.25rem * var(--scaleright));
+    --challenge-control-text-font-size: calc(1.125rem * var(--scaleright));
+
+    --challenge-leave-bg: #FF0101;
+    --challenge-draw-chat-bg: #222;
+
+    --challenge-control-icon-size: calc(1.25rem * var(--scaleright));
+
+    --code-editor-controls-padding: calc(0.5rem * var(--scaleright)) calc(3rem * var(--scaleright)) calc(0.5rem * var(--scaleright)) calc(2rem * var(--scaleright));
+    --code-editor-border-radius: calc(1.25rem * var(--scaleright)) calc(1.25rem * var(--scaleright)) 0 0;
+    --code-editor-controls-left-gap: calc(0.5rem * var(--scaleright));
+    --code-editor-controls-right-gap: calc(1.5rem * var(--scaleright));
+    --editor-run-gap: calc(0.75rem * var(--scaleright));
+    --editor-text-font-size: calc(1.15rem * var(--scaleright));
+    --editor-icon-size: calc(1.5rem * var(--scaleright));
+
+    --main-editor-border: 1px solid var(--glass, rgba(255, 255, 255, 0.17));
+    --main-editor-bg: var(--glassfil, rgba(255, 255, 255, 0.10));
+    --main-editor-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25);
+
+    --test-cases-section-margin-bottom: calc(2rem * var(--scaleright));
+    --test-cases-border-radius: 0 0 calc(1.25rem * var(--scaleright)) calc(1.25rem * var(--scaleright));
+    --test-cases-controls-padding-x: calc(3rem * var(--scaleright));
+    --test-cases-controls-gap: calc(1.5rem * var(--scaleright));
+    --test-case-control-padding: calc(0.625rem * var(--scaleright)) calc(0.5rem * var(--scaleright));
+    --test-case-control-gap: calc(0.5rem * var(--scaleright));
+    --test-case-control-icon-size: calc(1.25rem * var(--scaleright));
+    --test-case-control-text-font-size: calc(1.15rem * var(--scaleright));
+
+    --test-cases-padding: calc(1.25rem * var(--scaleright)) calc(1.9375rem * var(--scaleright));
+    --test-cases-gap: calc(0.625rem * var(--scaleright));
+
+    --test-case-padding: calc(0.625rem * var(--scaleright)) calc(1rem * var(--scaleright));
+    --test-case-gap: calc(0.5rem * var(--scaleright));
+    --test-case-border-radius: calc(1rem * var(--scaleright));
+    --test-case-text-font-size: calc(1.25rem * var(--scaleright));
+
+    --test-case-bg-selected: #171717;
+    --test-case-bg-wrong: #ff4444;
+    --test-case-bg-right: #74ff52;
+}
+
+.challenge-room {
+    display: flex;
+    width: var(--challenge-room-width);
+    height: var(--challenge-room-height);
+    position: relative;
+    user-select: none;
+    // margin: var(--challenge-room-margin-top) 0 0 0;
+    gap: var(--challenge-room-gap);
+    // top: var(--challenge-room-top);
+    line-height: normal !important;
+
+    .panel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-x: var(--panel-overflow-x);
+    }
+
+    .challenge-room__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--challenge-room-gap);
+        margin-top: 6rem;
+
+        .players__details {
+            display: flex;
+            padding: 0rem var(--players-details-padding-x);
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            gap: var(--players-details-gap);
+
+            .player {
+                display: flex;
+                align-items: center;
+                gap: var(--player-gap);
+
+                .playername {
+                    color: var(--challenge-room-light-color);
+                    font-size: var(--playername-font-size);
+                    line-height: normal;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .playerrating{
+                    color: var(--challenge-room-light-color);
+                    font-size: var(--playerrating-font-size);
+                    opacity: 0.8;
+                }
+
+                .right{
+                    align-items: flex-end;
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    .problem__about {
+        display: flex;
+        padding: var(--problem-about-padding);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--problem-about-gap);
+        align-self: stretch;
+
+        // border-radius: var(--problem-about-border-radius);
+        background: #E5F4FF;
+
+        .problem__title__level {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-self: stretch;
+            gap:2rem;
+
+            .problem__title {
+                color: var(--challenge-room-dark-color);
+                font-size: var(--problem-title-font-size);
+                line-height: 1;
+            }
+        }
+
+        .problem_desc_text {
+            color: var(--challenge-room-dark-color);
+            font-size: var(--problem-desc-font-size);
+            line-height: 1;
+        }
+
+        .problem_info {
+            display: flex;
+            padding: var(--problem-info-padding);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--problem-info-gap);
+            align-self: stretch;
+
+            border-radius: var(--problem-info-border-radius);
+            background: var(--challenge-room-dark-color);
+
+            .problem_description {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                align-self: stretch;
+
+                .problem_description_text {
+                    color: var(--challenge-room-light-color);
+                    font-size: var(--problem-description-text-font-size);
+                    line-height: normal;
+                }
+            }
+
+            .problem_in_out {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--problem-in-out-gap);
+                align-self: stretch;
+
+                .problem_in,
+                .problem_out {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    align-self: stretch;
+
+                    .problem_in_top,
+                    .problem_out_top {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.375rem;
+
+                        .input_text,
+                        .output_text {
+                            color: var(--challenge-room-light-color);
+                            font-size: var(--problem-in-out-text-font-size);
+                            line-height: 1;
+                        }
+                    }
+
+                    .problem_in_text,
+                    .problem_out_text {
+                        color: var(--challenge-room-light-color);
+                        font-size: var(--problem-in-out-text-font-size);
+                        line-height: 1;
+                    }
+                }
+            }
+
+            .problem_example {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--problem-example-gap);
+                align-self: stretch;
+                color: var(--challenge-room-light-color);
+                font-size: var(--problem-example-text-font-size);
+
+                .problem_example_details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: var(--problem-example-detail-gap);
+                    align-self: stretch;
+                }
+            }
+
+            .topics{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap:0.5rem;
+
+              .topic{
+                padding: 0.25rem 1rem;
+                background: #292929;
+                border-radius: 0.25rem;
+              }
+            }
+        }
+    }
+ 
+    .challenge-room__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--challenge-room-right-gap);
+        flex-grow: 1;
+        margin-top: 6rem;
+
+        .challenge_controls {
+            display: flex;
+            padding: 0 var(--challenge-controls-padding-x);
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            gap: var(--challenge-controls-gap);
+
+            .challenge_controls__left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: var(--challenge-controls-left-gap);
+
+                .time {
+                    color: var(--challenge-room-light-color);
+                    font-size: var(--challenge-time-font-size);
+                    line-height: 1;
+                }
+            }
+
+            .challenge_controls__right {
+                display: flex;
+                align-items: center;
+                gap: var(--challenge-controls-right-gap);
+
+                .challenge_controls__actions {
+                    display: flex;
+                    padding: var(--challenge-control-button-padding);
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(--challenge-control-button-gap);
+                    border-radius: var(--challenge-control-border-radius);
+                    background: var(--challenge-draw-chat-bg);
+                    position: relative;
+
+                    .control_text {
+                        color: var(--challenge-room-light-color);
+                        font-size: var(--challenge-control-text-font-size);
+                        line-height: 1;
+                    }
+                }
+
+                .leave {
+                    background: var(--challenge-leave-bg);
+                }
+            }
+
+            img {
+            width: var(--challenge-control-icon-size);
+            height: var(--challenge-control-icon-size);
+            }
+        }
+
+        .code_editor {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+
+            .code_editor__controls {
+                display: flex;
+                padding: var(--code-editor-controls-padding);
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+                border-radius: var(--code-editor-border-radius);
+                z-index: 5;
+
+                img {
+                    width: var(--editor-icon-size);
+                    height: var(--editor-icon-size);
+                }
+
+                .code_editor__controls_left {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(--code-editor-controls-left-gap);
+
+                    .editor_text {
+                    font-size: var(--editor-text-font-size);
+                    }
+                }
+
+                .code_editor__controls_right {
+                    display: flex;
+                    align-items: center;
+                    gap: var(--code-editor-controls-right-gap);
+
+                    .editor_run {
+                    display: flex;
+                    align-items: center;
+                    gap: var(--editor-run-gap);
+
+                    .run_text {
+                        font-size: var(--editor-text-font-size);
+                    }
+                    }
+                }
+            }
+
+            .main_editor {
+                align-self: stretch;
+                border: var(--main-editor-border);
+                background: var(--main-editor-bg);
+                box-shadow: var(--main-editor-shadow);
+            }
+        }
+
+        .test_cases__section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            margin-bottom: var(--test-cases-section-margin-bottom);
+            border-radius: var(--test-cases-border-radius);
+
+            .test_cases__controls {
+            display: flex;
+            padding: 0 var(--test-cases-controls-padding-x);
+            align-items: center;
+            gap: var(--test-cases-controls-gap);
+            align-self: stretch;
+
+            .test_case_control {
+                display: flex;
+                padding: var(--test-case-control-padding);
+                justify-content: center;
+                align-items: center;
+                gap: var(--test-case-control-gap);
+
+                img {
+                width: var(--test-case-control-icon-size);
+                height: var(--test-case-control-icon-size);
+                }
+
+                .control_text {
+                font-size: var(--test-case-control-text-font-size);
+                }
+            }
+            }
+
+            .test_cases {
+                display: flex;
+                padding: var(--test-cases-padding);
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--test-cases-gap);
+                align-self: stretch;
+
+            .test_case {
+                display: flex;
+                padding: var(--test-case-padding);
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: var(--test-case-gap);
+                align-self: stretch;
+                border-radius: var(--test-case-border-radius);
+
+                .test_case_text {
+                    font-size: var(--test-case-text-font-size);
+                    max-width: 20rem;
+                }
+            }
+            }
+
+            .selected {
+            background: var(--test-case-bg-selected);
+            }
+
+            .wrong {
+            background: var(--test-case-bg-wrong);
+            }
+
+            .right {
+            background: var(--test-case-bg-right);
+            }
+        }
+    }
+
+    .divider {
+        width: 0.25rem;
+        background-color: #333;
+        cursor: ew-resize;
+        position: relative;
+        border-radius: 20px;
+        margin-top: 6rem;
+    }
+
+    @media (max-width: 840px) {
+        flex-direction: column;
+        height: auto;
+        top: 4rem;
+        gap: 1rem;
+
+        .divider {
+            width: 100%;
+            height: 0.25rem;
+            cursor: ns-resize;
+        }
+
+        .challenge-room__right,.divider{
+            margin: 0;
+        }
+
+        .challenge-room__left{
+            margin-top: 2rem;
+        }
+    }
+}
+
+.timer__modal {
+  padding: 1rem;
+  background: #2e2e2e;
+  border-radius: 1rem;
+  text-align: center;
+  position: absolute;
+  top:2rem;
+  right:0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__icon{
+    display: flex;
+
+    img{
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+
+.timer__inputs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.timer__input {
+  display: flex;
+  align-items: center;
+  gap:0.25rem;
+}
+
+.timer__input input {
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #1a1a1a;
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+}
+
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+}
+
+
+.timer__label {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal__actions .action_bt {
+  padding: 0.5rem 1rem;
+  background: rgb(255, 185, 55);
+  border: none;
+  border-radius: 0.5rem;
+  color: rgb(41, 41, 41);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.custom-dropdown {
+  position: relative;
+//   width: 160px;
+  font-family: 'Google Sans', sans-serif;
+}
+
+.dropdown-selected {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.dropdown-selected img {
+  width: 20px;
+  height: 20px;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 12px;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 5;
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.dropdown-option:hover,
+.dropdown-option.selected {
+  background-color: #333;
+}
+
+.dropdown-option img {
+  width: 18px;
+  height: 18px;
+}
+
+
+
+.problem__level {
+    display: flex;
+    // padding: var(--problem-level-padding);
+    justify-content: center;
+    align-items: center;
+    gap: 0.125rem;
+
+    color: var(--challenge-room-light-color);
+    font-size: var(--problem-level-font-size);
+    line-height: 1;
+    border-radius: var(--problem-level-border-radius);
+    background: var(--challenge-room-dark-color);
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.green {
+  background-color: #00c853; /* Green */
+}
+
+.orange {
+  background-color: #ff9800; /* Orange */
+}
+
+.red {
+  background-color: #f44336; /* Red */
+}
+
+
+@media screen and (max-width: 1024px) {
+  .challenge-room {
+    --scaleleft: 0.9;
+    --scaleright: 0.9;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .challenge-room {
+    --scaleleft: 0.8;
+    --scaleright: 0.8;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .challenge-room {
+    --scaleleft: 0.7;
+    --scaleright: 0.7;
+  }
+}

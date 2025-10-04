@@ -1,0 +1,47 @@
+.page-top-m{
+    margin-top: 10rem !important;
+
+    @media (max-width: 576px) {
+        margin-top: 7rem !important;
+    }
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.page-bottom-m{
+    margin-bottom: 5rem !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.c-default {
+    cursor: default !important;
+}
+
+.c-grab {
+    cursor: grab !important;
+}
+
+.c-grabbing {
+    cursor: grabbing !important;
+}
+
+.ff-google-n{
+    font-family: 'GoogleSansRegular';
+}
+
+.ff-google-b{
+    font-family: 'GoogleSansBold';
+}
+
+.ff-arp-150{
+    font-family:'ARP 150';
+}
+
+.ff-kanit-n{
+    font-family: var(--font-kanit);
+}
